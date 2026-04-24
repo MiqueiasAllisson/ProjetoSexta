@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Lista de Categorias - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+  <br />
+  <b>Lista de Categorias</b>
+  <br />
+  <br />
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Descricao</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for category in categories %}
+        <tr>
+          <th>{{ category.id }}</th>
+          <td>{{ category.name }}</td>
+          <td>{{ category.description }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
