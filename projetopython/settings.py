@@ -89,6 +89,10 @@ DATABASES = {
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
+        'OPTIONS': {
+            'wallet_location': config('DB_WALLET_LOCATION', default=''),
+            'wallet_password': config('DB_WALLET_PASSWORD', default=''),
+        },
     }
 }
 

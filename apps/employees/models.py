@@ -12,4 +12,4 @@ class Employee(Person):
         ordering =['id']
 
     def __str__(self):
-        return super().__str__()
+        return super().first_name
